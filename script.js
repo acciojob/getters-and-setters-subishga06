@@ -1,35 +1,30 @@
-class Person {
-  constructor(name, age) {
-    this._name = name;
-    this._age = age;
+class Animal {
+  constructor(species) {
+    this._species = species;
   }
 
-  get name() {
-    return this._name;
+  get species() {
+    return this._species;
   }
 
-  get age() {
-    return this._age;
-  }
-
-  set age(age) {
-    this._age = age;
+  makeSound() {
+    console.log(`The ${this._species} makes a sound`);
   }
 }
 
-class Student extends Person {
-  study() {
-    console.log(`${this.name} is studying`);
+class Cat extends Animal {
+  purr() {
+    console.log("purr");
   }
 }
 
-class Teacher extends Person {
-  teach() {
-    console.log(`${this.name} is teaching`);
+class Dog extends Animal {
+  bark() {
+    console.log("woof");
   }
 }
 
 // Do not change the code below this line
-window.Person = Person;
-window.Student = Student;
-window.Teacher = Teacher;
+window.Animal = Animal;
+window.Cat = Cat;
+window.Dog = Dog;
